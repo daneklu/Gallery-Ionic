@@ -1,0 +1,29 @@
+<ion-content [fullscreen]="true">
+    <div class="header">
+        <ion-title class="title" horizontal="center">Welcome Back</ion-title>
+        <p class="subTitle">Sing in to access your account</p>
+    </div>
+    <form>
+        <div class="ion-padding">
+            <ion-item>
+                <ion-input placeholder="Enter your email" class="input"></ion-input>
+                <ion-icon name="person"></ion-icon>
+            </ion-item>
+            <ion-item>
+                <ion-input placeholder="Enter your password" class="input"></ion-input>
+                <ion-icon name="lock-closed"></ion-icon>
+            </ion-item>
+            <div class="forgotpassword">
+                <a [routerLink]="['/reset-password']" style="color: #FFC33F;">Forgot Password?</a>
+            </div>
+            <div class="singupLink">
+                <p>New here?<a style="color:#FFC33F;" [routerLink]="['/singup']">Sing up</a></p>
+            </div>
+        </div>
+        <ion-fab vertical="bottom" horizontal="center" style="margin-bottom: 30px;">
+            <ion-fab-button [routerLink]="['/home']">
+                <ion-icon name="chevron-forward"></ion-icon>
+            </ion-fab-button>
+        </ion-fab>
+    </form>
+</ion-content>

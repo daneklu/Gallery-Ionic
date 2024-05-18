@@ -1,0 +1,30 @@
+<ion-content [fullscreen]="true">
+    <div class="header">
+        <ion-title class="title">Welcome</ion-title>
+        <p class="subTitle">Sing up to create your account</p>
+    </div>
+    <form [formGroup]="regForm" nonvalidate>
+        <div class="ion-padding">
+            <ion-item>
+                <ion-input placeholder="Enter your name" class="input"></ion-input>
+                <ion-icon name="person"></ion-icon>
+            </ion-item>
+            <ion-item>
+                <ion-input placeholder="Enter your email" class="input"></ion-input>
+                <ion-icon name="at-outline"></ion-icon>
+            </ion-item>
+            <ion-item>
+                <ion-input placeholder="Enter your password" class="input"></ion-input>
+                <ion-icon name="lock-closed"></ion-icon>
+            </ion-item>
+            <div class="singinLink">
+                <p>Already a member?<a style="color:#FFC33F;" [routerLink]="['/login']">Sing in</a></p>
+            </div>
+        </div>
+    </form>
+    <ion-fab vertical="bottom" horizontal="end" style="margin-bottom: 1px;">
+        <ion-fab-button [routerLink]="['/home']">
+            <ion-icon name="chevron-forward"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>
