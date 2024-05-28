@@ -1,17 +1,19 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab 1
-    </ion-title>
+Pussy Gallery    
+</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-button (click)="refreshImages()" expand="full" color="primary" style="margin: 10px;">
+    Refresh Images
+  </ion-button>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div class="image-grid">
+    <div *ngFor="let image of images" class="image-container">
+      <img [src]="image.url" alt="Image" />
+    </div>
+  </div>
 </ion-content>

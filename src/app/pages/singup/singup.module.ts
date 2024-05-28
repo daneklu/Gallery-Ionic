@@ -16,6 +16,6 @@ import { SingupPage } from './singup.page';
     SingupPageRoutingModule,
     ReactiveFormsModule
   ],
-  declarations: [SingupPage]
+  declarations:[SingupPage]
 })
 export class SingupPageModule {}
