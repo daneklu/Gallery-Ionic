@@ -1,14 +1,17 @@
-<!-- src/app/tab4/tab4.page.html -->
-
 <ion-header>
     <ion-toolbar>
       <ion-title>
-        Tab 4
+        Account
       </ion-title>
     </ion-toolbar>
   </ion-header>
   
   <ion-content>
-    <p>Welcome to Tab 4!</p>
+   <div id="container">
+    <ion-title>{{user}}</ion-title>
+    <ion-button (click)="logout()">
+      <ion-icon name="log-out"></ion-icon>
+    </ion-button>
+   </div>
   </ion-content>
   
