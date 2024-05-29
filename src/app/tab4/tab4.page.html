@@ -1,17 +1,24 @@
 <ion-header>
-    <ion-toolbar>
-      <ion-title>
-        Account
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content>
-   <div id="container">
-    <ion-title>{{user}}</ion-title>
-    <ion-button (click)="logout()">
-      <ion-icon name="log-out"></ion-icon>
-    </ion-button>
-   </div>
-  </ion-content>
-  
+  <ion-toolbar>
+    <div id="container">
+      <ion-title>{{ user?.displayName }}</ion-title>
+      <ion-button (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </ion-button>
+    </div>
+    <ion-title>Account</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div>
+    <ion-avatar (click)="changeImage()">
+      <img *ngIf="profile?.imageUrl; else placeholder_avatar;" [src]="profile.imageUrl" />
+      <ng-template #placeholder_avatar>
+        <div class="fallback">
+          <p>Select Avatar</p>
+        </div>
+      </ng-template>
+    </ion-avatar>
+  </div>
+</ion-content>
