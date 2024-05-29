@@ -26,11 +26,11 @@ export class AvatarService {
     const user = this.auth.currentUser;
     const path = `uploads/${user?.uid}/profile.png`;
     const storageRef = ref(this.storage, path);
-  
+
     try {
       console.log('Uploading image to Firebase Storage...');
       const uploadTask = uploadString(storageRef, cameraFile.base64, 'base64');
-  
+
       uploadTask.then((snapshot) => {
         console.log('Image uploaded successfully:', snapshot);
         return getDownloadURL(storageRef);
